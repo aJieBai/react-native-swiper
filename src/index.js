@@ -229,9 +229,9 @@ export default class extends Component {
       if (this.props.loadMinimal && Platform.OS === 'ios') {
         this.setState({ ...this.props, index: this.state.index })
       } else {
-        this.setState(
-          this.initState({ ...this.props, index: this.state.index }, true)
-        )
+        // this.setState(
+        //   this.initState({ ...this.props, index: this.state.index }, true)
+        // )
       }
     }
   }
@@ -324,7 +324,7 @@ export default class extends Component {
     if(this.state.total > 1) {
       this.scrollView.scrollTo({ ...offset, animated: false })
     }
-	
+
     if (this.initialRender) {
       this.initialRender = false
     }
